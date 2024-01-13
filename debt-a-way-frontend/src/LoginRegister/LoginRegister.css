@@ -1,0 +1,96 @@
+/* Split the screen vertically for login and register */
+.auth-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 auto;
+  }
+  
+  .login-section, .register-section {
+    flex: 1; /* Make sections share available space evenly */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 1rem;
+    margin-right: 4rem; /* Add margin between sections */
+    margin-left: 4rem;
+  }
+  
+  .login-section {
+    background-color: white;
+    height: 30rem;
+    margin-top: -4rem;
+  }
+  
+  .register-section {
+    background-color: white;
+    height: 30rem;
+    margin-top: -4rem;
+  }
+  
+  /* Style for form elements */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -100px;
+  }
+  
+  input[type="email"], input[type="password"], input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 4px;
+    border: 1px solid #000000;
+    font-size: 1.3rem;
+    
+  }
+  
+  .ln-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 2rem;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 50%;
+    height: 3rem;
+    font-size: 25px;
+    font-weight: 700;
+  }
+  
+  .ln-button:hover {
+    background-color: green;
+    color: black;
+    transition: 0.3s;
+  }
+
+  .ln-button:active{
+    color: white;
+    transition: 0s;
+  }
+  
+  /* Add headings */
+  .login-section h2, .register-section h2 {
+    text-align: center;
+    margin-top: -3px;
+    margin-bottom: 130px;
+    color: green;
+    font-size: 3rem;
+  }
+  
+  @media (max-width: 768px) {
+    .auth-container {
+      flex-direction: column;
+    }
+  
+    .login-section, .register-section {
+      border-right: none;
+      border-bottom: 2px solid #ddd;
+      margin-right: 0;
+    }
+  }
+  
