@@ -1,0 +1,50 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: green; /* Customize the background color as needed */
+    color: #fff; /* Customize the text color as needed */
+    padding: 10px;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+
+
+.navbar-img-logo{
+    height: 45px;
+    width: 55px;
+    margin-left: 15px;
+}
+  
+  .navbar-logo-text {
+    font-size: 28px;
+    font-weight: 700;
+  }
+  
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    margin-left: 24rem;
+  }
+  
+  .navbar-links a {
+    color: #fff; 
+    text-decoration: none;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+  }
+
+
+  .nav-item:hover{
+    color: gold;
+    padding-bottom: 0.3rem;
+    transition: 0.3s;
+  }
+
+  .nav-item:active{
+    color: white;
+    transition: 0.3s;
+  }
