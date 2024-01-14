@@ -64,7 +64,7 @@ function LoginRegister() {
           <input 
             type="email" 
             name="email" 
-            placeholder="Email" 
+            placeholder="Username or Email" 
             value={loginCredentials.email} 
             onChange={handleLoginChange} 
           />

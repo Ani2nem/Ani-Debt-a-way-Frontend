@@ -18,8 +18,12 @@ axios.interceptors.request.use(function (config) {
 });
 
 function App() {
-  const isAuthenticated = false; // Replace this with actual authentication logic
+  let isAuthenticated = false; // Replace this with actual authentication logic
   const userToken = localStorage.getItem('token');
+
+  if(userToken){
+    isAuthenticated = true;
+  }
 
   return (
     <Router>

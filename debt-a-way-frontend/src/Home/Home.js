@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { jwtDecode } from 'jwt-decode';
-//import jwtDecode from 'jwt-decode';
+import './Home.css'
 
 function Home() {
   const [walletBalance, setWalletBalance] = useState(0);

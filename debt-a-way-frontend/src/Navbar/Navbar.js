@@ -16,22 +16,23 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      
-      <img className="navbar-img-logo" src="/logo.png" rel='icon' />
-      <div className="navbar-logo-text"> Debt-a-way</div>
+      <div className='nav-logo'>
+        <img className="navbar-img-logo" src="/logo.png" rel='icon' />
+        <div className="navbar-logo-text"> Debt-A-Way</div>
+      </div>
+      {isLoggedIn() && (
       <div className="navbar-links">
           <Link className="nav-item" to="/home">Home</Link>
           <Link className="nav-item" to="/debts-owed">Owed</Link>
           <Link className="nav-item" to="/debts-receivable">Receivable</Link>
           <Link className="nav-item" to="/wallet">Wallet</Link>
         <div>
-          {isLoggedIn() && (
             <button className="logout-button" onClick={handleLogout}>
               Logout
             </button>
-          )}
           </div>
         </div>
+        )}
     </nav>
   );
 };

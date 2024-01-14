@@ -2,30 +2,42 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: green; /* Customize the background color as needed */
-    color: #fff; /* Customize the text color as needed */
+    background: linear-gradient(to right, #064f06, #018c01); 
+    color: #fff; 
     padding: 10px;
     font-size: 22px;
     font-weight: 600;
+    font-family: sans-serif;
   }
 
 
+  .nav-logo{
+    display: flex;
+    justify-content: space-between;
+  }
 
 .navbar-img-logo{
     height: 45px;
     width: 55px;
     margin-left: 15px;
+    margin-right: 15px;
 }
   
   .navbar-logo-text {
     font-size: 28px;
     font-weight: 700;
+    margin-top: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
   }
+
+  
+
   
   .navbar-links {
     display: flex;
     align-items: center;
-    margin-left: 24rem;
+    margin-left: 28rem;
   }
   
   .navbar-links a {
