@@ -27,7 +27,7 @@
   }
   
   .register-section {
-    background-color: black;
+    background: black;
     height: 30rem;
   }
   
@@ -50,14 +50,25 @@
     font-family: 'Roboto', sans-serif;
     color: white;
     background-color: rgb(18, 18, 18);
-    border: 1px solid rgba(255, 255, 255, 0.276);
+    border: 1px solid rgba(255, 255, 255, 0.144);
+    padding-left: 0.7rem;
   }
+  input[type="email"]::placeholder,
+  input[type="password"]::placeholder,
+  input[type="text"]::placeholder {
+    width: 70%;
+    font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(101, 100, 100);
+}
+
   
   .ln-button {
     padding: 10px 20px;
     border: none;
     border-radius: 2rem;
-    background-color: green;
+    background: linear-gradient(to right, #096109, #03c103); 
     color: white;
     cursor: pointer;
     margin-top: 20px;
@@ -65,12 +76,12 @@
     height: 3rem;
     font-size: 25px;
     font-weight: 700;
+    transition: 0.5s;
   }
   
   .ln-button:hover {
-    background-color: rgb(123, 204, 0);
+    background: linear-gradient(to right, #03c103, #096109); 
     color: white;
-    transition: 0.3s;
   }
 
   .ln-button:active{
@@ -85,7 +96,7 @@
     color: transparent; 
     font-size: 3rem;
     margin-top: 1rem;
-    background: linear-gradient(to right, #096109, #009900);  /* Same gradient as navbar */
+    background: linear-gradient(to right, #03c103, #096109); 
     -webkit-background-clip: text; /* Clip the background to the text */
     background-clip: text;
 }
