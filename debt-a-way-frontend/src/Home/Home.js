@@ -208,7 +208,7 @@ function Home() {
           </tbody>
         </table>
       ) : (
-        <p className='default-debt-posting'>No unfulfilled debt postings available.</p>
+        <p className='default-debt-text'>No unfulfilled debt postings available.</p>
       )}
 
     </div>

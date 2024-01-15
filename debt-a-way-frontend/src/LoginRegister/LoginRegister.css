@@ -1,3 +1,8 @@
+.Login-section{
+  margin-top: 5rem;
+}
+
+
 /* Split the screen vertically for login and register */
 .auth-container {
     display: flex;

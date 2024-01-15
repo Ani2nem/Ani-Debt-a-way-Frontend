@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './LoginRegister.css'
+import Navbar from '../Navbar/Navbar';
 
 function LoginRegister() {
   const [loginCredentials, setLoginCredentials] = useState({ email: '', password: '' });
@@ -57,6 +58,8 @@ function LoginRegister() {
 };
 
   return (
+    <div className="Login-section">
+      <Navbar />
     <div className="auth-container">
       <div className="login-section">
       <h2>Login</h2>
@@ -112,6 +115,7 @@ function LoginRegister() {
           <button className="ln-button"type="submit">Register</button>
         </form>
       </div>
+    </div>
     </div>
   );
 }

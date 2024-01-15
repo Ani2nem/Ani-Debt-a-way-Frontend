@@ -64,7 +64,8 @@ const DebtsOwed = () => {
     <div className='Debts-Owed'>
        <div className="full-width-container">
        <h3 className="debts-owed-heading">Debts Owed by Me</h3>
-            <table className="debts-owed-table">
+       {debtsOwedByUser.length > 0 ? (
+            <table className="dod-table">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -86,12 +87,15 @@ const DebtsOwed = () => {
                     ))}
                 </tbody>
             </table>
+       ) : ( <p className='default-debt-text'>You don't owe any debts.</p>
+       )}
         </div>
 
         <div className="full-width-container">
 
             <h3 className="debts-owed-heading">Debts Owed History</h3>
-            <table className="debts-owed-table">
+            {debtsHistory.length > 0 ? (
+            <table className="dod-table">
                 <thead>
                     <tr>
                         <th>Lender</th>
@@ -109,6 +113,8 @@ const DebtsOwed = () => {
                     ))}
                 </tbody>
             </table>
+            ) : ( <p className='default-debt-text'>No debt history available yet.</p>
+       )}
         </div>
     </div>
       <Footer/>

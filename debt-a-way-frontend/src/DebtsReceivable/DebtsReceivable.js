@@ -85,6 +85,7 @@ const handleOpenTradeModal = (debtId) => {
       <div className='debts-recieved-section'>
         <div className="full-width-container">
         <h3 className="debts-owed-heading">Debts Owed to Me</h3>
+      {debtsOwedToUser.length > 0 ? (
         <table className="dod-table">
             <thead>
             <tr>
@@ -107,9 +108,14 @@ const handleOpenTradeModal = (debtId) => {
             ))}
             </tbody>
         </table>
+        ) : (
+        <p className='default-debt-text'>No unfulfilled debt postings available.</p>
+      )}
         </div>
+
         <div className="full-width-container">
         <h3 className="debts-owed-heading">Debts Received History</h3>
+        {debtsHistory.length > 0 ? (
                 <table className="dod-table">
                     <thead>
                         <tr>
@@ -128,6 +134,9 @@ const handleOpenTradeModal = (debtId) => {
                         ))}
                     </tbody>
                 </table>
+                ) : (
+                  <p className='default-debt-text'>No debt history available yet.</p>
+                )}
         </div>
       {/* Trade Modal */}
     
