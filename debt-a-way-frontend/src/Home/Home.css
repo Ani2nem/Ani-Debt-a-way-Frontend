@@ -44,13 +44,15 @@
 
   .full-width-container h3{
     color: white;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     margin-left: 1rem;
   }
 
   .default-debt-posting{
     color: white;
     font-size: 1rem;
+    margin-left: 1rem;
+    font-style: italic;
   }
 
 
@@ -59,21 +61,21 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    background: linear-gradient(to right, #054505, #019601); 
+    background-color: green;
     padding: 20px;
-    margin: 20px 8px;
+    margin: 0px 8px;
+    margin-top: -0.9rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   .post-debt input, .post-debt select, .post-debt textarea{
-    
     padding: 10px;
     margin: 50px 20px 5px 45px;
     border-radius: 0.7rem;
     border: 1px solid none;
     width: 30rem;
-    height: 2.5rem;
+    height: 2rem;
     font-size: 1.5rem;
     color: white;
     background-color: rgb(18, 18, 18);
@@ -106,47 +108,74 @@
   .post-debt img{
     margin-left: 45rem;
     margin-top: -19.2rem;
+    width: 35rem;
   }
   
 
   
   .table {
-    width: 100%;
+    color: white;
+    width: 98.3%;
+    overflow-x: auto;
     border-collapse: collapse;
     margin-bottom: 20px;
-    overflow-x: auto; /* Allows table to scroll on small screens */
+    margin-left:1rem;
+    font-size: 20px;
   }
   
   .table th,
   .table td {
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid black;
     text-align: left;
   }
   
   .table th {
-    background-color: #f0f0f0;
+    background: green;
+    border-color: green;
+    font-size: 20px;
   }
   
-  .table tr:nth-child(even) {
-    background-color: #f7f7f7;
-  }
+  /* Target the last column in the table */
+.table td:last-child,
+.table th:last-child {
+    width: 10px;
+    align-items: center;
+}
+
+.table td:first-child,
+.table th:first-child {
+    font-weight: 700;
+}
+ 
+ 
   
   .table button {
-    padding: 5px 10px;
+    padding: 5px 0px;
     border: none;
-    background-color: #007bff; /* Blue color for example */
-    color: white;
+    background-color: white; 
+    color: black;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 20px;
+    font-weight: 600;
+    width: 20rem;
   }
   
   .table button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: rgb(47, 45, 45); 
+    color: white;
+  }
+  .table button:active {
+    background-color: yellow;
+    color:  rgb(47, 45, 45); 
+    transition: 0.3s;
   }
   
-  
+
+
+
   .section-heading {
     font-size: 1.2em;
     font-weight: bold;
