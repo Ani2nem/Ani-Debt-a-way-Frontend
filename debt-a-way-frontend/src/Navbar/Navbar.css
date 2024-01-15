@@ -8,6 +8,9 @@
     font-size: 22px;
     font-weight: 600;
     font-family: sans-serif;
+    position: fixed;
+    width: 100%;
+    top:0;
   }
 
 
@@ -37,6 +40,7 @@
   .navbar-links {
     display: flex;
     align-items: center;
+    margin-right: 1rem;
   }
   
   .navbar-links a {

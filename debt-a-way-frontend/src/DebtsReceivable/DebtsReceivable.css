@@ -1,0 +1,65 @@
+.debts-recieved-section{
+  margin-top: 6.5rem;
+  margin-bottom: 20rem;
+}
+
+.dod-table {
+    color: white;
+    width: 98.3%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-left:1rem;
+    font-size: 20px;
+  }
+  
+  .dod-table th,
+  .dod-table td {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: left;
+  }
+  
+  .dod-table th {
+    background: green;
+    border-color: green;
+    font-size: 20px;
+  }
+  
+  /* Target the last column in the table */
+.dod-table td:last-child,
+.dod-table th:last-child {
+    width: 10px;
+    align-items: center;
+}
+
+.dod-table td:first-child,
+.dod-table th:first-child {
+    font-weight: 700;
+}
+ 
+ 
+  
+  .dod-table button {
+    padding: 5px 0px;
+    border: none;
+    background-color: white; 
+    color: black;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+    font-weight: 600;
+    width: 20rem;
+  }
+  
+  .dod-table button:hover {
+    background-color: rgb(47, 45, 45); 
+    color: white;
+  }
+  .dod-table button:active {
+    background-color: yellow;
+    color:  rgb(47, 45, 45); 
+    transition: 0.3s;
+  }
+  

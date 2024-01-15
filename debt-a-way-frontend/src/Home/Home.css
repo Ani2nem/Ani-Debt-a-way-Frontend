@@ -1,3 +1,8 @@
+.Home-section{
+  margin-top: 6.5rem;
+}
+
+
 /* Container for tiles */
 .tiles-container {
     display: flex;
@@ -112,7 +117,7 @@
   
 
   
-  .table {
+  .ufd-table {
     color: white;
     width: 98.3%;
     overflow-x: auto;
@@ -122,34 +127,34 @@
     font-size: 20px;
   }
   
-  .table th,
-  .table td {
+  .ufd-table th,
+  .ufd-table td {
     padding: 10px;
     border: 1px solid black;
     text-align: left;
   }
   
-  .table th {
+  .ufd-table th {
     background: green;
     border-color: green;
     font-size: 20px;
   }
   
   /* Target the last column in the table */
-.table td:last-child,
-.table th:last-child {
+.ufd-table td:last-child,
+.ufd-table th:last-child {
     width: 10px;
     align-items: center;
 }
 
-.table td:first-child,
-.table th:first-child {
+.ufd-table td:first-child,
+.ufd-table th:first-child {
     font-weight: 700;
 }
  
  
   
-  .table button {
+  .ufd-table button {
     padding: 5px 0px;
     border: none;
     background-color: white; 
@@ -162,17 +167,80 @@
     width: 20rem;
   }
   
-  .table button:hover {
+  .ufd-table button:hover {
     background-color: rgb(47, 45, 45); 
     color: white;
   }
-  .table button:active {
+  .ufd-table button:active {
     background-color: yellow;
     color:  rgb(47, 45, 45); 
     transition: 0.3s;
   }
   
 
+
+
+  
+  .fwd-table {
+    color: white;
+    width: 98.3%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-left:1rem;
+    font-size: 20px;
+  }
+  
+  .fwd-table th,
+  .fwd-table td {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: left;
+  }
+  
+  .fwd-table th {
+    background: green;
+    border-color: green;
+    font-size: 20px;
+  }
+  
+  /* Target the last column in the table */
+.fwd-table td:last-child,
+.fwd-table th:last-child {
+    width: 10px;
+    align-items: center;
+}
+
+.fwd-table td:first-child,
+.fwd-table th:first-child {
+    font-weight: 700;
+}
+ 
+ 
+  
+  .fwd-table button {
+    padding: 5px 0px;
+    border: none;
+    background-color: white; 
+    color: black;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+    font-weight: 600;
+    width: 20rem;
+  }
+  
+  .fwd-table button:hover {
+    background-color: rgb(47, 45, 45); 
+    color: white;
+  }
+  .fwd-table button:active {
+    background-color: yellow;
+    color:  rgb(47, 45, 45); 
+    transition: 0.3s;
+  }
+  
 
 
   .section-heading {

@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { jwtDecode } from 'jwt-decode';
 import './Home.css'
+import Footer from '../Footer/Footer'
+import Navbar from '../Navbar/Navbar';
 
 function Home() {
   
@@ -139,6 +141,8 @@ function Home() {
   
 
   return (
+    <>
+    <Navbar />
     <div className="Home-section" id="home">
       <div  className="tiles-container">
         <div  className="tile" onClick={navWallet}>
@@ -181,7 +185,7 @@ function Home() {
     <div className="full-width-container">
       <h3 className="section-heading">Unfulfilled Debts</h3>
       {unfulfilledDebts.length > 0 ? (
-        <table className="table">
+        <table className="ufd-table">
           <thead>
             <tr>
               <th>Name</th>
@@ -211,7 +215,7 @@ function Home() {
 
     <div className="full-width-container">
       <h3 className="section-heading">Tradable Debt Postings</h3>
-            <table className="table">
+            <table className="fwd-table">
               <thead>
                 <tr>
                   <th>Borrower</th>
@@ -236,8 +240,9 @@ function Home() {
               </tbody>
             </table>
     </div>
-
+    <Footer />
   </div>
+  </>
   );
 }
 

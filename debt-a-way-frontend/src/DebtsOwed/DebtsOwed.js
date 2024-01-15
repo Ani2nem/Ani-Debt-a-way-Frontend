@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { jwtDecode } from 'jwt-decode';
+import './DebtsOwed.css'
+import Footer from '../Footer/Footer'
+import Navbar from '../Navbar/Navbar';
 
 // const token = localStorage.getItem('userToken');
   
@@ -57,6 +60,8 @@ const DebtsOwed = () => {
 
   return (
     <div>
+      <Navbar />
+    <div className='Debts-Owed'>
        <div className="full-width-container">
        <h3 className="debts-owed-heading">Debts Owed by Me</h3>
             <table className="debts-owed-table">
@@ -106,6 +111,8 @@ const DebtsOwed = () => {
             </table>
         </div>
     </div>
+      <Footer/>
+  </div>
   );
 };
 

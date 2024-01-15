@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { jwtDecode } from 'jwt-decode';
+import './Wallet.css'
+import Footer from '../Footer/Footer';
+import Navbar from '../Navbar/Navbar';
 
-
-// const token = localStorage.getItem('userToken');
-  
-//   const decodedToken = jwtDecode(token);
-//   const userId = decodedToken._id;
-  
 
 const Wallet = () => {
   const [balance, setBalance] = useState(0);
@@ -44,22 +41,6 @@ const Wallet = () => {
     setDebtsReceivable(totalReceivable); // Update based on actual response structure
   };
 
-  // const fetchTransactions = async () => {
-  //   try {
-  //       const response = await axios.get('https://debt-a-way.onrender.com/api/debt-postings/transaction-logs');
-        
-  //       const relevantTransactions = response.data.filter(log =>
-  //         (log.type === 'lend' && log.userId === userId) ||
-  //         (log.type === 'borrow' && log.userId === userId)
-  //       );
-  //       setTransactions(relevantTransactions);
-        
-  //       //setTransactions(response.data);
-  //   } catch (error) {
-  //       console.error('Error fetching transactions:', error);
-  //   }
-  // };
-
 
   const handleAddToWallet = async () => {
     try {
@@ -74,94 +55,7 @@ const Wallet = () => {
     }
   };
 
-  // const fetchTransactions = async () => {
-  //   try {
-  //       const response = await axios.get('https://debt-a-way.onrender.com/api/debt-postings/transaction-logs');
-  //       setTransactions(response.data);
-  //   } catch (error) {
-  //       console.error('Error fetching transactions:', error);
-  //   }
-  // };
-
-  // const fetchTransactions = async () => {
-  //   try {
-  //     const response = await axios.get('https://debt-a-way.onrender.com/api/debt-postings/transaction-logs');
-      
-  //     const formattedTransactions = response.data.map(log => {
-  //       // Determine the transaction direction and other party based on the userId
-  //       const isUserInitiator = log.userId.toString() === userId;
-  //       const direction = isUserInitiator ? 'debit' : 'credit';
-  //       let otherParty = 'N/A';
   
-  //       if (isUserInitiator && log.otherId!=null) {
-  //         otherParty = log.otherId.username;
-  //       } else if (!isUserInitiator) {
-  //         otherParty = log.userId.username;
-  //       }
-  
-  //       return {
-  //         ...log,
-  //         direction,
-  //         otherParty
-  //       };
-  //     });
-  
-  //     setTransactions(formattedTransactions);
-  //   } catch (error) {
-  //     console.error('Error fetching transactions:', error);
-  //   }
-  // };
-
-  // const fetchTransactions = async () => {
-  //   try {
-  //     const response = await axios.get('https://debt-a-way.onrender.com/api/debt-postings/transaction-logs');
-  
-  //     const formattedTransactions = response.data.map(log => {
-  //       const isUserInitiator = log.userId._id === userId;
-  //       const direction = isUserInitiator ? 'debit' : 'credit';
-  //       let otherParty = isUserInitiator && log.otherId ? log.otherId.username : log.userId.username;
-  
-  //       return {
-  //         ...log,
-  //         direction,
-  //         otherParty
-  //       };
-  //     });
-  
-  //     setTransactions(formattedTransactions);
-  //   } catch (error) {
-  //     console.error('Error fetching transactions:', error);
-  //   }
-  // };
-  
-  // const fetchTransactions = async () => {
-  //   try {
-  //     const response = await axios.get('https://debt-a-way.onrender.com/api/debt-postings/transaction-logs');
-  
-  //     const formattedTransactions = response.data.map(log => {
-  //       let direction, otherParty;
-  
-  //       if (log.type === 'add') {
-  //         direction = 'credit';
-  //         otherParty = 'N/A'; // No other party involved in wallet addition
-  //       } else {
-  //         const isUserInitiator = log.userId._id === userId;
-  //         direction = isUserInitiator ? 'debit' : 'credit';
-  //         otherParty = isUserInitiator && log.otherId ? log.otherId.username : log.userId.username;
-  //       }
-  
-  //       return {
-  //         ...log,
-  //         direction,
-  //         otherParty
-  //       };
-  //     });
-  
-  //     setTransactions(formattedTransactions);
-  //   } catch (error) {
-  //     console.error('Error fetching transactions:', error);
-  //   }
-  // };
 
   const fetchTransactions = async () => {
     try {
@@ -211,11 +105,10 @@ const Wallet = () => {
   };
 
   return (
-    // <div>
-    //   <h2>Wallet Balance: ${balance}</h2>
-    //   {/* Display transactions */}
-    // </div>
+   
     <div>
+      <Navbar />
+      <div className='wallet-section'>
         <div  className="tiles-container">
         <div  className="tile" onClick={() => {/* Navigate to Wallet Balance page */}}>
         < div className="tile-title">Wallet Balance</div>
@@ -270,7 +163,8 @@ const Wallet = () => {
           </tbody>
         </table>
       </div>
-        
+      </div>
+      <Footer />
     </div>
   );
 };

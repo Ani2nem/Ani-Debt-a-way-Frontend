@@ -28,7 +28,6 @@ function App() {
 
   return (
     <Router>
-      <Navbar />
       <Routes>
         <Route path="/" element={isAuthenticated ? <Home /> : <Navigate to="/login" />} />
         <Route path="/login" element={<LoginRegister />} />
@@ -38,7 +37,6 @@ function App() {
         <Route path="/wallet" element={<Wallet/>} />
         {/* Define other routes as needed */}
       </Routes>
-      <Footer />
     </Router>
   );
 }
