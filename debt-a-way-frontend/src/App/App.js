@@ -8,6 +8,7 @@ import DebtsOwed from '../DebtsOwed/DebtsOwed';
 import DebtsReceivable from '../DebtsReceivable/DebtsReceivable';
 import Wallet from '../Wallet/Wallet';
 import './App.css';
+import Footer from '../Footer/Footer';
 
 // Import additional components or hooks as needed
 
@@ -37,6 +38,7 @@ function App() {
         <Route path="/wallet" element={<Wallet/>} />
         {/* Define other routes as needed */}
       </Routes>
+      <Footer />
     </Router>
   );
 }

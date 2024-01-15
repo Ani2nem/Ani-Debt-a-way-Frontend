@@ -139,7 +139,7 @@ function Home() {
   
 
   return (
-    <div>
+    <div className="Home-section" id="home">
       <div  className="tiles-container">
         <div  className="tile" onClick={navWallet}>
         < div className="tile-title">Wallet Balance</div>

@@ -1,0 +1,36 @@
+.Footer-section {
+    width: 100%;
+    height: 12rem;
+    background-color: green;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.trademark-text {
+    color: white;
+    margin-top: 3rem;
+}
+
+.creators-text{
+    margin-top: -5px;
+    color: white;
+    font-size: 15px;
+}
+
+.footer-links{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-link{
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+    margin-right: 6rem;
+    margin-left: 6rem;
+    font-weight: 700;
+    cursor: pointer;
+}
