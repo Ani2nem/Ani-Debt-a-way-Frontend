@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { jwtDecode } from 'jwt-decode';
 import './Home.css'
 
 function Home() {
+  
   const [walletBalance, setWalletBalance] = useState(0);
   const [debtsOwed, setDebtsOwed] = useState(0);
   const [debtsReceivable, setDebtsReceivable] = useState(0);
@@ -19,6 +21,7 @@ function Home() {
   
   const decodedToken = jwtDecode(token);
   const userId = decodedToken._id;
+  
   
 
   useEffect(() => {
@@ -117,31 +120,43 @@ function Home() {
       console.error('Error lending to debt posting:', error);
     }
   };
-  
-  
-  
-  
+
+  const navigate = useNavigate();
+
+  const navWallet = () => {
+    navigate('/wallet');
+  };
+
+  const navOwed = () => {
+    navigate('/debts-owed');
+  };
+
+  const navReceivable = () => {
+    navigate('/debts-receivable');
+  };
+
+ 
   
 
   return (
     <div>
       <div  className="tiles-container">
-        <div  className="tile" onClick={() => {/* Navigate to Wallet Balance page */}}>
+        <div  className="tile" onClick={navWallet}>
         < div className="tile-title">Wallet Balance</div>
             <div className="tile-number">${walletBalance}</div>
         </div>
-        <div  className="tile" onClick={() => {/* Navigate to Debts Owed page */}}>
+        <div  className="tile" onClick={navOwed}>
             <div className="tile-title">Debts Owed</div>
             <div className="tile-number">${debtsOwed}</div> 
         </div>
-        <div  className="tile" onClick={() => {/* Navigate to Debts Receivable page */}}>
+        <div  className="tile" onClick={navReceivable}>
             <div className="tile-title">Debts Receivable</div>
             <div className="tile-number"> ${debtsReceivable}</div> 
         </div>
      </ div>
 
      <div className="full-width-container">
-     <h3 >Post a New Debt</h3>
+     <h3 >Post New Debt</h3>
       <div className="post-debt">
         
         <input
@@ -159,11 +174,12 @@ function Home() {
         {/* Add more inputs for other debt details */}
         
         <button onClick={handlePostDebt}>Post Debt</button>
+        <img src="./borrow-img.png" alt="money"/>
       </div>
     </div>
 
     <div className="full-width-container">
-      <h3 className="section-heading">Unfulfilled Debt Postings</h3>
+      <h3 className="section-heading">Unfulfilled Debts</h3>
       {unfulfilledDebts.length > 0 ? (
         <table className="table">
           <thead>
@@ -188,7 +204,7 @@ function Home() {
           </tbody>
         </table>
       ) : (
-        <p>No unfulfilled debt postings available.</p>
+        <p className='default-debt-posting'>No unfulfilled debt postings available.</p>
       )}
 
     </div>
