@@ -1,14 +1,12 @@
 import React from 'react';
 import axios from 'axios'; 
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import Navbar from '../Navbar/Navbar';
 import LoginRegister from '../LoginRegister/LoginRegister';
 import Home from '../Home/Home';
 import DebtsOwed from '../DebtsOwed/DebtsOwed';
 import DebtsReceivable from '../DebtsReceivable/DebtsReceivable';
 import Wallet from '../Wallet/Wallet';
 import './App.css';
-import Footer from '../Footer/Footer';
 
 // Import additional components or hooks as needed
 

@@ -3,6 +3,17 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './LoginRegister.css'
 import Navbar from '../Navbar/Navbar';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
+const showToast = (message) => {
+  toast.info(message, {
+    position: "top-center",
+    autoClose: 3000, // milliseconds
+  });
+};
 
 function LoginRegister() {
   const [loginCredentials, setLoginCredentials] = useState({ email: '', password: '' });
@@ -22,25 +33,33 @@ function LoginRegister() {
     e.preventDefault();
     try {
       const response = await axios.post('https://debt-a-way.onrender.com/api/users/login', loginCredentials);
+  
       if (response.data.token) {
         localStorage.setItem('userToken', response.data.token);
         navigate('/home');
+      } else {
+        // This block will execute if the backend doesn't return a token
+        showToast("Sorry, Our Website is Down at this moment, thank you for your patience.");
       }
     } catch (error) {
-      console.error(error);
+      if (error.response && error.response.status === 401) {
+        showToast("Incorrect email or password. Please try again or register new account.");
+      } else {
+        console.error(error);
+      }
     }
   };
+  
 
   const handleRegisterSubmit = async (e) => {
     e.preventDefault();
     if (registerCredentials.password !== registerCredentials.confirmPassword) {
-        alert('Passwords do not match');
+        showToast('Passwords do not match');
         return;
     }
-
+    
     try {
         const regResponse = await axios.post('https://debt-a-way.onrender.com/api/users/register', registerCredentials);
-        
         if(regResponse.data.user){
           const loginResponse = await axios.post('https://debt-a-way.onrender.com/api/users/login', {
         email: registerCredentials.email,
@@ -53,7 +72,13 @@ function LoginRegister() {
     }
   } catch (error) {
     console.error(error);
-    // Handle registration errors (e.g., user already exists, server error)
+    if (error.response) {
+      // duplicate username or email alert
+        showToast("Username or email is already taken. Please choose a different one.");
+    } else {
+      // Handle other unexpected errors
+      showToast("An unexpected error occurred. Please try again later.");
+    }
   }
 };
 
@@ -116,6 +141,7 @@ function LoginRegister() {
         </form>
       </div>
     </div>
+    <ToastContainer />
     </div>
   );
 }
