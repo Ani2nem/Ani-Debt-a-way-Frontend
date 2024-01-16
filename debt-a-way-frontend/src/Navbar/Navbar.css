@@ -17,6 +17,8 @@
   .nav-logo{
     display: flex;
     justify-content: space-between;
+    text-decoration: none;
+    color: white;
   }
 
 .navbar-img-logo{

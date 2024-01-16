@@ -153,6 +153,7 @@ const Wallet = () => {
 
       <div className="transaction-logs-container">
         <h3>Transaction Logs</h3>
+        {transactions.length > 0 ? (
         <table className='transaction-table'>
           <thead>
             <tr>
@@ -177,6 +178,9 @@ const Wallet = () => {
             ))}
           </tbody>
         </table>
+         ) : (
+          <p className='default-debt-text'>No Transaction History available.</p>
+        )}  
       </div>
       </div>
       <Footer />

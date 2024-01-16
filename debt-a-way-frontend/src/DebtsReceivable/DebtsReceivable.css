@@ -16,7 +16,7 @@
   .dod-table th,
   .dod-table td {
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid transparent;
     text-align: left;
   }
   
@@ -37,6 +37,15 @@
 .dod-table th:first-child {
     font-weight: 700;
 }
+
+.dod-table tr:nth-child(even) {
+  background-color: black;
+}
+
+.dod tr:nth-child(odd) {
+  background-color: rgb(16, 16, 16);
+}
+
  
  
   
@@ -63,3 +72,100 @@
     transition: 0.3s;
   }
   
+
+/* Modal styles */
+
+.trade-modal-content {
+  color: white;
+  background: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 8px;
+  border: 1px solid #000000;
+  width: 30%;
+  height: 40%;
+  max-width: 80rem; /* Maximum width */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.trade-modal-header {
+  font-size: 2rem; 
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.modal-flexbox{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.trade-modal-input {
+  width: 90%;
+  height: 1.2rem;
+  padding: 8px;
+  margin-bottom: 4rem;
+  border-radius: 4px;
+  border: 1px solid #2d2b2b;
+  min-width: none;
+  margin-left: 0.7rem;
+  font-size: 20px;
+  background-color: rgb(18, 18, 18);
+  color: white;
+}
+
+.trade-modal-button, .trade-modal-button-cancel {
+  width: 94%;
+  height: 2.5rem;
+  padding: 10px 15px;
+  margin-left: 0.8rem;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+ 
+}
+
+.trade-modal-button{
+  margin-top: -1.5rem;
+  background-color: rgb(7, 206, 7);
+  color: white;
+}
+.trade-modal-button:hover {
+  background-color: green;
+}
+.trade-modal-button:active {
+  background-color: rgb(7, 206, 7);
+  color: black;
+}
+
+.trade-modal-button-cancel {
+  background-color: #545b62;
+  color: white;
+}
+.trade-modal-button-cancel:hover {
+  background-color: #4b5155;
+}
+.trade-modal-button-cancel:active {
+  background-color: #545b62;
+  color: black;
+}
+
+
+.Modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+

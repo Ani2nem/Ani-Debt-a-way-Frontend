@@ -15,10 +15,10 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className='nav-logo'>
+      <Link className='nav-logo' to="/home">
         <img className="navbar-img-logo" src="/logo.png" rel='icon' />
         <div className="navbar-logo-text"> Debt-A-Way</div>
-      </div>
+      </Link>
       {isLoggedIn() && (
       <div className="navbar-links">
           <Link className="nav-item" to="/home">Home</Link>

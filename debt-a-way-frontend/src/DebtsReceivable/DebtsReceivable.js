@@ -148,14 +148,16 @@ const handleOpenTradeModal = (debtId) => {
         // You can add more styling or positioning properties here
         >
         <h4 className="trade-modal-header">Set Trade Price</h4>
-        <input
+        <div className='modal-flexbox'>
+        <input className='trade-modal-input'
             type="number"
             value={tradePrice}
             onChange={(e) => setTradePrice(e.target.value)}
             placeholder="Trade Price"
         />
-        <button  className="trade-modal-button trade-modal-button-primary" onClick={handleTradeDebt}>Confirm Trade</button>
-        <button   className="trade-modal-button trade-modal-button-secondary" onClick={handleCloseTradeModal}>Cancel</button>
+        <button  className="trade-modal-button" onClick={handleTradeDebt}>Confirm Trade</button>
+        <button   className="trade-modal-button-cancel" onClick={handleCloseTradeModal}>Cancel</button>
+        </div>
         </Modal>
 
         </div>
