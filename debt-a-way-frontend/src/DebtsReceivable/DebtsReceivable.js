@@ -109,7 +109,7 @@ const handleOpenTradeModal = (debtId) => {
             </tbody>
         </table>
         ) : (
-        <p className='default-debt-text'>No unfulfilled debt postings available.</p>
+        <p className='default-debt-text'>No Debts Receivable.</p>
       )}
         </div>
 

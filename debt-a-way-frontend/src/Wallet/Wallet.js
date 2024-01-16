@@ -4,6 +4,7 @@ import { jwtDecode } from 'jwt-decode';
 import './Wallet.css'
 import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
+import { useNavigate } from 'react-router-dom';
 
 
 const Wallet = () => {
@@ -104,21 +105,35 @@ const Wallet = () => {
     }
   };
 
+  const navigate = useNavigate();
+
+  const navWallet = () => {
+    navigate('/wallet');
+  };
+
+  const navOwed = () => {
+    navigate('/debts-owed');
+  };
+
+  const navReceivable = () => {
+    navigate('/debts-receivable');
+  };
+
   return (
    
     <div>
       <Navbar />
       <div className='wallet-section'>
         <div  className="tiles-container">
-        <div  className="tile" onClick={() => {/* Navigate to Wallet Balance page */}}>
+        <div  className="tile" onClick={navWallet}>
         < div className="tile-title">Wallet Balance</div>
             <div className="tile-number">${balance}</div>
         </div>
-        <div  className="tile" onClick={() => {/* Navigate to Debts Owed page */}}>
+        <div  className="tile" onClick={navOwed}>
             <div className="tile-title">Debts Owed</div>
             <div className="tile-number">${debtsOwed}</div> 
         </div>
-        <div  className="tile" onClick={() => {/* Navigate to Debts Receivable page */}}>
+        <div  className="tile"  onClick={navReceivable}>
             <div className="tile-title">Debts Receivable</div>
             <div className="tile-number"> ${debtsReceivable}</div> 
         </div>
@@ -138,7 +153,7 @@ const Wallet = () => {
 
       <div className="transaction-logs-container">
         <h3>Transaction Logs</h3>
-        <table>
+        <table className='transaction-table'>
           <thead>
             <tr>
               <th>Date</th>

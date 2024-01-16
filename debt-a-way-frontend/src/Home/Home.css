@@ -151,6 +151,14 @@
 .ufd-table th:first-child {
     font-weight: 700;
 }
+
+.ufd-table tr:nth-child(even) {
+  background-color: black;
+}
+.ufd-table tr:nth-child(odd) {
+  background-color: rgb(16, 16, 16);
+}
+
  
  
   
@@ -241,7 +249,13 @@
     transition: 0.3s;
   }
   
-
+  .fwd-table tr:nth-child(even) {
+    background-color: black;
+  }
+  .fwd-table tr:nth-child(odd) {
+    background-color: rgb(16, 16, 16);
+  }
+  
 
   .section-heading {
     font-size: 1.2em;
