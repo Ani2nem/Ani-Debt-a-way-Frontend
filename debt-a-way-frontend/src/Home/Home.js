@@ -143,7 +143,7 @@ function Home() {
   return (
     <>
     <Navbar />
-    <div className="Home-section" id="home">
+    <div className="Home-section">
       <div  className="tiles-container">
         <div  className="tile" onClick={navWallet}>
         < div className="tile-title">Wallet Balance</div>
@@ -198,7 +198,7 @@ function Home() {
             {unfulfilledDebts.map(debt => (
               <tr key={debt._id}>
                 <td>{debt.borrower.username}</td>
-                <td>{debt.amount}</td>
+                <td className="value">${debt.amount}</td>
                 <td>{debt.interestRate}%</td>
                 <td>
                   <button onClick={() => handleLendClick(debt._id)}>Lend</button>
@@ -229,7 +229,7 @@ function Home() {
                 {tradableDebts.map(debt => (
                   <tr key={debt._id}>
                     <td>{debt.borrower.username}</td>
-                    <td>{debt.amount}</td>
+                    <td className="value">${debt.amount}</td>
                     <td>{debt.interestRate}%</td>
                     <td>{debt.tradePrice}</td>
                     <td>

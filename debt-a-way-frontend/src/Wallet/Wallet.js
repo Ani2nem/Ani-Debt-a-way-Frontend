@@ -172,14 +172,14 @@ const Wallet = () => {
                 <td className={transaction.direction === 'credit' ? 'credit-amount' : 'debit-amount'}>
                   {transaction.direction}
                 </td>
-                <td>${transaction.amount}</td>
+                <td className="value">${transaction.amount}</td>
                 <td>{transaction.otherParty}</td>
               </tr>
             ))}
           </tbody>
         </table>
          ) : (
-          <p className='default-debt-text'>No Transaction History available.</p>
+          <p className='default-debt-text transaction-default'>No Transaction History available.</p>
         )}  
       </div>
       </div>

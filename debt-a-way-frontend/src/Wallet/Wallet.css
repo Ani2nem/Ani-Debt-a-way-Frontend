@@ -73,8 +73,9 @@
 
   .transaction-logs-container h3{
     color: white;
-    font-size: 2rem;
-    margin-left: 1.8rem;
+    font-size: 3rem;
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
   }
 
 
@@ -82,11 +83,11 @@
 
 .transaction-table {
     color:white;
-    width: 98.3%;
+    width: 96.3%;
     overflow-x: auto;
     border-collapse: collapse;
     margin-bottom: 20px;
-    margin-left:1rem;
+    margin-left: 2rem;
     font-size: 20px;
   }
   
@@ -117,6 +118,6 @@
   .debit-amount {
     color: red;
   }
-  
-  
-  
+.transaction-default{
+  margin-left: 2rem;
+}

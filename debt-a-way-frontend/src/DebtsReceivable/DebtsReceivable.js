@@ -99,7 +99,7 @@ const handleOpenTradeModal = (debtId) => {
             {debtsOwedToUser.map(debt => (
                 <tr key={debt._id}>
                 <td>{debt.borrower.username}</td>
-                <td>{debt.amount}</td>
+                <td className="value">${debt.amount}</td>
                 <td>{debt.interestRate}%</td>
                 <td>
                     <button className="pay-button" onClick={() => handleOpenTradeModal(debt._id)}>Trade Debt</button>
@@ -128,7 +128,7 @@ const handleOpenTradeModal = (debtId) => {
                         {debtsHistory.map(debt => (
                             <tr key={debt._id}>
                                 <td>{debt.borrower.username}</td> {/* Adjust as per your data structure */}
-                                <td>{debt.amount}</td>
+                                <td className="value">${debt.amount}</td>
                                 <td>{debt.interestRate}%</td>
                             </tr>
                         ))}

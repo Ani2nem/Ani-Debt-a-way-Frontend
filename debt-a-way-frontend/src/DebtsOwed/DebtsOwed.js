@@ -78,7 +78,7 @@ const DebtsOwed = () => {
                     {debtsOwedByUser.map(debt => (
                         <tr key={debt._id}>
                             <td>{debt.lender.username}</td> {/* Adjust as per your data structure */}
-                            <td>{debt.amount}</td>
+                            <td className="value">${debt.amount}</td>
                             <td>{debt.interestRate}%</td>
                             <td>
                               <button className="pay-button" onClick={() => handlePayDebt(debt._id)}>Pay</button>
@@ -107,7 +107,7 @@ const DebtsOwed = () => {
                     {debtsHistory.map(debt => (
                         <tr key={debt._id}>
                             <td>{debt.lender.username}</td> {/* Adjust as per your data structure */}
-                            <td>{debt.amount}</td>
+                            <td className="value">${debt.amount}</td>
                             <td>{debt.interestRate}%</td>
                         </tr>
                     ))}

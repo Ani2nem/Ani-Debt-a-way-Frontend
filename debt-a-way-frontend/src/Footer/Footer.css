@@ -26,11 +26,16 @@
 }
 
 .footer-link{
-    font-size: 40px;
+    font-size: 30px;
     color: white;
     text-decoration: none;
     margin-right: 10rem;
     margin-left: 10rem;
+    margin-top: -4.5rem;
     font-weight: 700;
     cursor: pointer;
+    background-color: black;
+    width: 3rem;
+    text-align: center;
+    height: 2rem;
 }
